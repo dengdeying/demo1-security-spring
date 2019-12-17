@@ -1,4 +1,4 @@
-package club.deying.demo.scurity.spring;
+package club.deying.demo.security.spring;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
@@ -6,10 +6,10 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 
 @SpringBootApplication
-public class Demo1ScuritySpringApplication {
+public class Demo1SecuritySpringApplication {
 
 	public static void main(String[] args) {
-		SpringApplication.run(Demo1ScuritySpringApplication.class, args);
+		SpringApplication.run(Demo1SecuritySpringApplication.class, args);
 	}
 
 }
