@@ -1,4 +1,4 @@
-package club.deying.demo.scurity.spring;
+package club.deying.demo.security.spring;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
