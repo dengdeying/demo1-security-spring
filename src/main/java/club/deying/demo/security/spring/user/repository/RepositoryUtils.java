@@ -18,8 +18,11 @@ public class RepositoryUtils {
         BCryptPasswordEncoder passwordEncoder = new BCryptPasswordEncoder(4);
 
         Privilege pHello = new Privilege("/", "hello", "hello");
+        privileges.add(pHello);
         Privilege pAdmin = new Privilege("/admin", "hello", "hello");
+        privileges.add(pAdmin);
         Privilege pMerchant = new Privilege("/merchant", "hello", "hello");
+        privileges.add(pMerchant);
 
         Role rAdmin = new Role("ADMIN", "admin");
         setPrivileges(rAdmin, pAdmin);
@@ -33,15 +36,15 @@ public class RepositoryUtils {
 
         ArrayList<Role> userAuth = new ArrayList<>();
         userAuth.add(rMember);
-        users.add(new SecurityUser("user", passwordEncoder.encode("password"), userAuth));
+        users.add(new SecurityUser("user", passwordEncoder.encode("123"), userAuth));
 
         ArrayList<Role> adminAuth = new ArrayList<>();
         adminAuth.add(rAdmin);
-        users.add( new SecurityUser("admin", passwordEncoder.encode("password"), adminAuth));
+        users.add( new SecurityUser("admin", passwordEncoder.encode("123"), adminAuth));
 
         ArrayList<Role> merchantAuth = new ArrayList<>();
         merchantAuth.add(rMerchant);
-        users.add(new SecurityUser("merchant", passwordEncoder.encode("password"), merchantAuth));
+        users.add(new SecurityUser("merchant", passwordEncoder.encode("123"), merchantAuth));
 
     }
 

@@ -17,9 +17,9 @@ public class LoginFailureHandler extends SimpleUrlAuthenticationFailureHandler {
 
     @Override
     public void onAuthenticationFailure(HttpServletRequest request, HttpServletResponse response, AuthenticationException exception) throws IOException, ServletException {
+        log.info("authentication failure");
         /* 默认：执行重定向或转发到defaultfailureurl(如果设置)，Other返回401错误代码 */
         super.onAuthenticationFailure(request, response, exception);
 
-        log.info("authentication failure");
     }
 }

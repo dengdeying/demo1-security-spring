@@ -17,9 +17,9 @@ public class LoginSucessHandler extends SavedRequestAwareAuthenticationSuccessHa
 
     @Override
     public void onAuthenticationSuccess(HttpServletRequest request, HttpServletResponse response, Authentication authentication) throws ServletException, IOException {
+        log.info("authentication sucess");
         /* 默认：会帮我们跳转到上一次请求的页面上 */
         super.onAuthenticationSuccess(request, response, authentication);
 
-        log.info("authentication sucess");
     }
 }

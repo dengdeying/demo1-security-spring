@@ -32,7 +32,7 @@ public class MyAccessDecisionManager implements AccessDecisionManager {
             String attribute = configAttribute.getAttribute();
             /* 用户的权限 */
             for (GrantedAuthority authority : authentication.getAuthorities()) { // 当前用户的权限
-                if (authority.getAuthority().trim().equals("ROLE_ANONYMOUS")) return;
+//                if (authority.getAuthority().trim().equals("ROLE_ANONYMOUS")) return;
                 log.info("[资源角色==用户角色] ？ {} == {}", attribute.trim(), authority.getAuthority().trim());
                 if (attribute.trim().equals(authority.getAuthority().trim())) {
                     log.info("[鉴权决策管理器]：登录用户[{}]权限匹配", authentication.getName());
