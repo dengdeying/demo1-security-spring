@@ -9,4 +9,14 @@ public class HelloEndpoint {
     public String hello() {
         return "hello, Spring Security";
     }
+
+    @GetMapping("/admin")
+    public String admin() {
+        return "hello, admin";
+    }
+
+    @GetMapping("/merchant")
+    public String merchant() {
+        return "hello, merchant";
+    }
 }
