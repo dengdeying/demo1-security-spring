@@ -14,29 +14,31 @@ import java.util.List;
 
 @Component
 public class SecurityUserDetailsService implements UserDetailsService {
+
+    //模拟数据源
     private static List<SecurityUser> users = new ArrayList<>();
 
     static {
+        //密码加密工具
         BCryptPasswordEncoder passwordEncoder = new BCryptPasswordEncoder(4);
 
-        SimpleGrantedAuthority admin = new SimpleGrantedAuthority("ADMIN");
-        SimpleGrantedAuthority member = new SimpleGrantedAuthority("MEMBER");
-        SimpleGrantedAuthority merchant = new SimpleGrantedAuthority("MERCHANT");
-
+        //创建用户并设置用户角色
         ArrayList<SimpleGrantedAuthority> userAuth = new ArrayList<>();
-        userAuth.add(member);
-        users.add(new SecurityUser("user", passwordEncoder.encode("password"), userAuth));
+        userAuth.add(new SimpleGrantedAuthority("MEMBER"));
+        users.add(new SecurityUser("user", passwordEncoder.encode("123"), userAuth));
 
         ArrayList<SimpleGrantedAuthority> merchantAuth = new ArrayList<>();
-        merchantAuth.add(merchant);
-        users.add(new SecurityUser("merchant", passwordEncoder.encode("password"), merchantAuth));
+        merchantAuth.add(new SimpleGrantedAuthority("MERCHANT"));
+        users.add(new SecurityUser("merchant", passwordEncoder.encode("123"), merchantAuth));
 
         ArrayList<SimpleGrantedAuthority> adminAuth = new ArrayList<>();
-        adminAuth.add(admin);
-        users.add(new SecurityUser("admin", passwordEncoder.encode("password"), adminAuth));
+        adminAuth.add(new SimpleGrantedAuthority("ADMIN"));
+        users.add(new SecurityUser("admin", passwordEncoder.encode("123"), adminAuth));
     }
 
     /**
+     * 根据用户名从数据源中检索用户信息
+     *
      * @param username
      *
      * @return
