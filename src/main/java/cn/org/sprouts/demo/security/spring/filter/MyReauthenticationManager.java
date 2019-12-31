@@ -16,8 +16,6 @@ public class MyReauthenticationManager implements AuthenticationManager {
 
     @Override
     public Authentication authenticate(Authentication authentication) throws AuthenticationException {
-        log.info("****************************************重新认证********************************************");
-
         if (!supports(authentication.getPrincipal().getClass()))
             throw new AuthenticationServiceException("Cannot authenticate " + authentication);
 
