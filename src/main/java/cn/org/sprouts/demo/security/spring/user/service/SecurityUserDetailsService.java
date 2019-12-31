@@ -1,6 +1,6 @@
-package club.deying.demo.security.spring.user.service;
+package cn.org.sprouts.demo.security.spring.user.service;
 
-import club.deying.demo.security.spring.user.domain.SecurityUser;
+import cn.org.sprouts.demo.security.spring.user.domain.SecurityUser;
 import org.apache.commons.lang3.StringUtils;
 import org.springframework.security.core.authority.SimpleGrantedAuthority;
 import org.springframework.security.core.userdetails.UserDetails;

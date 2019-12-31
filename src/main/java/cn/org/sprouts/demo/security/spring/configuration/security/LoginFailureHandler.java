@@ -1,4 +1,4 @@
-package club.deying.demo.security.spring.configuration.security;
+package cn.org.sprouts.demo.security.spring.configuration.security;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;

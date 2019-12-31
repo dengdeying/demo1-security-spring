@@ -1,4 +1,4 @@
-package club.deying.demo.security.spring.user.domain;
+package cn.org.sprouts.demo.security.spring.user.domain;
 
 import org.springframework.security.core.GrantedAuthority;
 import org.springframework.security.core.userdetails.User;

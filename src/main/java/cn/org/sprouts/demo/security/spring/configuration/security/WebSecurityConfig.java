@@ -1,6 +1,6 @@
-package club.deying.demo.security.spring.configuration.security;
+package cn.org.sprouts.demo.security.spring.configuration.security;
 
-import club.deying.demo.security.spring.user.service.SecurityUserDetailsService;
+import cn.org.sprouts.demo.security.spring.user.service.SecurityUserDetailsService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Bean;
 import org.springframework.http.HttpMethod;
@@ -31,9 +31,8 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
                 .formLogin()/* 配置表单登录 */
                 .usernameParameter("username") /* 默认值 username */
                 .passwordParameter("password") /* 默认值 password */
-//                .loginPage("/login.html") /* 设置登录页面，默认是HTTP GET /login */
                 .loginPage("/login") /* 设置登录页面，默认是HTTP GET /login */
-//                .loginProcessingUrl("/login") /* 设置登录页面，默认是HTTP POST /login */
+                .loginProcessingUrl("/login") /* 设置登录页面，默认是HTTP POST /login */
                 .successHandler(loginSucessHandler)
                 .failureHandler(loginFailureHandler)
 

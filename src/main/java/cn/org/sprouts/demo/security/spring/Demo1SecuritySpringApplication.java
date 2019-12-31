@@ -1,4 +1,4 @@
-package club.deying.demo.security.spring;
+package cn.org.sprouts.demo.security.spring;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
