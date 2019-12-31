@@ -31,8 +31,11 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
                 .formLogin()/* 配置表单登录 */
                 .usernameParameter("username") /* 默认值 username */
                 .passwordParameter("password") /* 默认值 password */
-                .loginPage("/login.html") /* 设置登录页面，默认是HTTP GET /login */
-                .loginProcessingUrl("/login") /* 设置登录页面，默认是HTTP POST /login */
+//                .loginPage("/login.html") /* 设置登录页面，默认是HTTP GET /login */
+                .loginPage("/login") /* 设置登录页面，默认是HTTP GET /login */
+//                .loginProcessingUrl("/login") /* 设置登录页面，默认是HTTP POST /login */
+                .successHandler(loginSucessHandler)
+                .failureHandler(loginFailureHandler)
 
                 .and()/* 完成上一个配置，进行下一步配置 */
 
