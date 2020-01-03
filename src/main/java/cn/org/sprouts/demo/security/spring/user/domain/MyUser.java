@@ -2,17 +2,16 @@ package cn.org.sprouts.demo.security.spring.user.domain;
 
 import org.springframework.security.core.GrantedAuthority;
 import org.springframework.security.core.userdetails.User;
-import org.springframework.security.core.userdetails.UserDetails;
 
 import java.util.Collection;
 
-public class SecurityUser extends User implements UserDetails {
+public class MyUser extends User {
 
-    public SecurityUser(String username, String password, Collection<? extends GrantedAuthority> authorities) {
+    public MyUser(String username, String password, Collection<? extends GrantedAuthority> authorities) {
         super(username, password, authorities);
     }
 
-    public SecurityUser(String username,
+    public MyUser(String username,
             String password,
             boolean enabled,
             boolean accountNonExpired,

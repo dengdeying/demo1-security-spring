@@ -1,6 +1,6 @@
 package cn.org.sprouts.demo.security.spring.configuration.security;
 
-import cn.org.sprouts.demo.security.spring.user.service.SecurityUserDetailsService;
+import cn.org.sprouts.demo.security.spring.user.service.MyUserDetailsService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Bean;
 import org.springframework.http.HttpMethod;
@@ -17,7 +17,7 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
     @Autowired
     private LoginFailureHandler loginFailureHandler;
     @Autowired
-    private SecurityUserDetailsService userDetailsService;
+    private MyUserDetailsService userDetailsService;
 
     @Override
     protected void configure(HttpSecurity http) throws Exception {
